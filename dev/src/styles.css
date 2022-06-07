@@ -1,0 +1,148 @@
+#loader-container {
+	z-index: 9999;  
+	overflow: hidden;  
+}
+
+/* Assign div#loader-container this class for a full screen loader */
+.loader-full-screen {
+	position: fixed;
+	top: 0;  
+	left: 0;  
+	right: 0;  
+	bottom: 0;  
+	background: rgba(0, 0, 0, 0.5);
+}
+
+/*Assign div#loader-container this class when inserting into a box */
+.preloader-responsive {
+	width: 100%;
+	height: auto;
+}
+
+/*This preloader is square with a side size of 15% it's parent container's width*/
+#preloader{  
+	position: relative;
+	top: 40%;  
+	left: 40%;  
+	/*UNCOMMENT FOLLOWING 3 LINES FOR PLAIN BLUE PRELOADER*/
+	border: 6px solid #f2f2f2;  
+	border-top: 4px solid #56829e ;  
+	border-radius: 50%;  
+	width: 15%; 
+	max-width: 120px; 
+	animation: animate-preloader 1s linear infinite;
+	/*UNCOMMENT FOLLOWING 5 LINES FOR COLORED PRELOADER*/
+	/*
+	background: 
+		radial-gradient(at 50% 50%, white 61%, transparent 61% 63%, white 63%),
+		linear-gradient(205deg, transparent 50%, magenta 85%),
+		linear-gradient(230deg, white 43%, transparent 30%),
+		linear-gradient(0.25turn, cyan 30%, transparent 35%);*/
+}
+
+#preloader:after {
+	content: "";
+	display: block;
+	padding-bottom: 100%;
+}
+
+@keyframes animate-preloader {  
+	0% {    
+		transform: rotate(0deg);  
+	}  
+	100% {    
+		transform: rotate(360deg);  
+	}
+}
+
+/*===For form validation ===*/
+@keyframes shake {
+	0% {
+		transform: translateX(0%);
+	}
+
+	16% {
+		transform: translateX(-4%);
+	}
+
+	28% {
+		transform: translateX(4%);
+	}
+
+	44% {
+		transform: translateX(-3%);
+	}
+
+	59% {
+		transform: translateX(3%);
+	}
+
+	73% {
+		transform: translateX(-1%);
+	}
+
+	88% {
+		transform: translateX(1%);
+	}
+
+	100% {
+		transform: translateX(0%);
+	}
+
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.hidden {
+	display: none;
+}
+
+fieldset {
+	border: 1px solid black;
+	margin: 5px;
+}
+
+table {
+	margin: 5px;
+}
+
+tr:nth-child(odd) {
+	background-color: lightgray;
+}
+
+th {
+	padding: 5px;
+}
+
+td {
+	text-align: center;
+}
+
+/*=== Editor modal ===*/
+#editor {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+#edit-item-form {
+	background-color: white;
+}
+/*=== Editor modal ===*/
+
+/*If cursor is detected*/
+@media (pointer: fine) {
+	#someID {
+		display: block;
+	}
+}
+
+/*=== Small devices ===*/
+@media only screen and (max-width: 576px) {
+	
+}
