@@ -43,7 +43,7 @@
 	$query->execute();
 	
 	// Fetch last inserted row
-	$resultB = $conn->query('SELECT i.id, i.name, i.stock, l.name as loc FROM inventory i LEFT JOIN locations l ON (l.id = i.locationID) ORDER BY i.id DESC LIMIT 1');
+	$resultB = $conn->query('SELECT i.id, i.name, i.stock, l.name as loc, l.id as locID FROM inventory i LEFT JOIN locations l ON (l.id = i.locationID) ORDER BY i.id DESC LIMIT 1');
 
 	$response = mysqli_fetch_assoc($resultB);
 
